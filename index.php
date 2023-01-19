@@ -7,7 +7,7 @@ include "utils\utils.php";
 /// THIS IS THE ROUTE LIST BELOW
 $unparsed_uri = $_SERVER['REQUEST_URI'];
 $uri= parse_url($unparsed_uri, PHP_URL_PATH);
-//dd($uri);
+//dd($unparsed_uri);
 
 
 $routes = [

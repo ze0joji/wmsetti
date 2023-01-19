@@ -17,7 +17,7 @@
         <ul class="nav">
           <li class="active ">
             <a href="/">
-              <i class=" <?php if(uri==="/"){echo("nc-icon nc-minimal-left");}?>></i>
+              <i class=""></i>
               <p>Home</p>
             </a>
           </li>
