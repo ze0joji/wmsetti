@@ -1,4 +1,4 @@
-
+<? php require('controllers\Login.php'); ?>
 <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
         <div class="container-fluid">
           <div class="navbar-wrapper">
@@ -36,12 +36,26 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="/login">Sign-in</a>
-                  <a class="dropdown-item" href="/register">Register</a>
-                  <a class="dropdown-item" href="">Completely safe and secure link</a>
+                  <?php
+                  if (isset($_SESSION['username'])) {
+                    // show logout button
+                    
+                    echo '<a href="/logout">Sign Out</a>';
+                    
+                  }
+                  else
+                  {
+                  echo '<a class="dropdown-item" href="/login">Sign-in</a>';
+                  echo '<a class="dropdown-item" href="/register">Register</a>';
+                  echo '<a class="dropdown-item" href="">Completely safe and secure link</a>';
+                }
+                ?>
                 </div>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+
+
+   

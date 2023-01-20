@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "utils\utils.php";
 
 /// THIS IS THE ROUTE LIST BELOW
@@ -15,6 +16,9 @@ $routes = [
     '/register' => 'controllers\register.php',
     '/machines' => 'controllers\machines.php',
     '/suppliers' => 'controllers\suppliers.php',
+    '/about' => 'controllers\about.php',
+    '/contact' => 'controllers\contact.php',
+    '/logout' => 'controllers\Logoutfunc.php'
 
 ];
 

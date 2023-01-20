@@ -10,7 +10,7 @@
             </nav>
             <div class="credits ml-auto">
               <span class="copyright">
-                © 2020, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                © 2020, HTML, CSS & Front-end JS   made with <i class="fa fa-heart heart"></i> by <a href=""https://www.creative-tim.com">Creative Tim </a>
               </span>
             </div>
           </div>

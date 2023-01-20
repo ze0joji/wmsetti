@@ -13,32 +13,46 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
+          <li class="<?php if (urlIs("/")) {
+                echo ("active");}?> ">
             <a href="/">
-              <i class="<?php if (urlIs("/")) {
-                echo ("nc-icon nc-minimal-right");}?>"></i>
+            
               <p>Home</p>
             </a>
           </li>
-          <li class="active ">
+          <li class="<?php if (urlIs("/employees")) {
+                echo ("active");}?> ">
             <a href="/employees">
-            <i class="<?php if (urlIs("/employees")) {
-                echo ("nc-icon nc-minimal-right");}?>"></i>
+           
               <p>Employees</p>
             </a>
           </li>
-          <li class="active ">
+          <li class="<?php if (urlIs("/machines")) {
+                echo ("active");}?> " ">
             <a href="/machines">
-            <i class="<?php if (urlIs("/machines")) {
-                echo ("nc-icon nc-minimal-right");}?>"></i>
+            
               <p>Machines</p>
             </a>
           </li>
-          <li class="active ">
+          <li class="<?php if (urlIs("/suppliers")) {
+                echo ("active");}?> " ">
             <a href="/suppliers">
-            <i class="<?php if (urlIs("/suppliers")) {
-                echo ("nc-icon nc-minimal-right");}?>"></i>
+            
               <p>Suppliers</p>
+            </a>
+          </li>
+          <li class="<?php if (urlIs("/about")) {
+                echo ("active");}?> ">
+            <a href="/about">
+            
+              <p>About us</p>
+            </a>
+          </li>
+          <li class="<?php if (urlIs("/contact")) {
+                echo ("active");}?> " ">
+            <a href="/contact">
+           
+              <p>Contact</p>
             </a>
           </li>
 
