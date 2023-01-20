@@ -67,27 +67,15 @@
               </div>
             </div>
             <div class="card-body">
-              <form role="form" class="text-start">
-              <div class="input-group input-group-outline my-3">
-                  <label class="form-label">Name</label>
-                  <input type="name" class="form-control">
-                </div>
-                <div class="input-group input-group-outline my-3">
-                  <label class="form-label">Email</label>
-                  <input type="email" class="form-control">
-                </div>
-                <div class="input-group input-group-outline mb-3">
-                  <label class="form-label">Password</label>
-                  <input type="password" class="form-control">
-                </div>
-                
-                <div class="text-center">
-                  <button type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign up</button>
-                </div>
-                <p class="mt-4 text-sm text-center">
-                  <a href = "/login"> Already have an account? </a>
-                </p>
-              </form>
+            <form method="post" action="<?php performRegistration()?>">
+            <label for="newuser">Username:</label>
+            <input type="text" id="newuser" name="newuser" required>
+            <br>
+            <label for="newpassword">Password:</label>
+            <input type="newpassword" id="newpassword" name="newpassword" required>
+            <br>
+            <input type="submit" name="Sign Up" value="Sign Up">
+            </form>
             </div>
           </div>
         </div>

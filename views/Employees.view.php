@@ -56,7 +56,6 @@
 </form>
           <?php
     
-    $numEntries = count($entries);
     
     echo "<table>";
     
@@ -65,15 +64,18 @@
     echo "<th>Age</th>";
     echo "<th>Gender</th>";
     echo "<th>Pay</th>";
-
+    echo "<td>Clearance</td>";
+    echo "<td>Employment Status</td>";
     echo "</tr>";
     
-    for ($i = 0; $i < $numEntries; $i++) {
+    for ($i = 0; $i < 6; $i++) {
         echo "<tr>";
-        echo "<td>" . $entries[$i]['Name'] . "</td>";
-        echo "<td>" . $entries[$i]['Age'] . "</td>";
-        echo "<td>" . $entries[$i]['Gender'] . "</td>";
-        echo "<td>" . $entries[$i]['Pay'] . "</td>";
+        echo "<td>" . $result[$i]['Employee ID'] . "</td>";
+        echo "<td>" . $result[$i]['First Name'] . "</td>";
+        echo "<td>" . $result[$i]['Last Name'] . "</td>";
+        echo "<td>" . $result[$i]['SSN'] . "</td>";
+        echo "<td>" . $result[$i]['Clearance'] . "</td>";
+        echo "<td>" . $result[$i]['Employment status'] . "</td>";
         echo "</tr>";
     }
     
