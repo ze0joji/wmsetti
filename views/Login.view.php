@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Material Kit 2 by Creative Tim
+  <?php echo $pagename ?>
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -84,7 +84,7 @@
                   <button type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
                 </div>
                 <p class="mt-4 text-sm text-center">
-                  Don't have an account?
+                  <a href = "/register"> Don't have an account? </a>
                 </p>
               </form>
             </div>
@@ -102,7 +102,7 @@
   <script src="../assets/js/plugins/parallax.min.js"></script>
   <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+ 
   <script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
 </body>
 

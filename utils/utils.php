@@ -12,5 +12,5 @@ function dd($var) {
 // GET URL
 
 function urlIs($url) {
-    return $_SERVER['REQUEST_URI'] == $url;
+    return parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH) == $url;
 }

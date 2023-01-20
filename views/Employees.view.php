@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Paper Dashboard 2 by Creative Tim
+    <?php echo $pagename ?>
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -16,15 +16,18 @@
   <!-- CSS Files -->
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="./assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+  <link href="./assets/css/table.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="./assets/demo/demo.css" rel="stylesheet" />
+  
 </head>
 
 <body class="">
   <div class="wrapper ">
     <!-- Sidebar NAV -->
+    
   <?php require 'views/partials/sidenav.php'; ?>
 
+  
     <div class="main-panel" style="height: 100vh;">
       <!-- TOPNAV -->
       <?php require 'views/partials/topnav.php'; ?>
@@ -32,7 +35,54 @@
       <div class="content">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="description">Your content here</h3>
+
+          <form>
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search">
+
+    <label for="filter">Filter by:</label>
+    <select id="filter" name="filter">
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+    </select>
+
+    <label for="order">Order by:</label>
+    <select id="order" name="order">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+    </select>
+
+    <input type="submit" value="Apply">
+</form>
+          <?php
+    
+    $numEntries = count($entries);
+    
+    echo "<table>";
+    
+    echo "<tr>";
+    echo "<th>Name</th>";
+    echo "<th>Age</th>";
+    echo "<th>Gender</th>";
+    echo "<th>Pay</th>";
+
+    echo "</tr>";
+    
+    for ($i = 0; $i < $numEntries; $i++) {
+        echo "<tr>";
+        echo "<td>" . $entries[$i]['Name'] . "</td>";
+        echo "<td>" . $entries[$i]['Age'] . "</td>";
+        echo "<td>" . $entries[$i]['Gender'] . "</td>";
+        echo "<td>" . $entries[$i]['Pay'] . "</td>";
+        echo "</tr>";
+    }
+    
+    echo "</table>";
+?>
+
+
+
+
           </div>
         </div>
       </div>
